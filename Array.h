@@ -32,7 +32,13 @@ public:
 		return this->size;
 	}
 	const void setSize(size_t size) {
+		int* update = new int[size] {};
+		for (size_t i = 0; i < this->size; i++)
+		{
+			update[i] = this->arr[i];
+		}
 		this->size = size;
+		this->arr = update;
 	}
 	inline const int getElementAt(size_t index) const{
 		if (index > getSize()) {

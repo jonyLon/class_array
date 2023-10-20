@@ -13,6 +13,10 @@ int main()
     cout << "Max: " << Digits.max() << endl;
     Digits.sort();
     Digits.print();
+
+    Digits.setSize(6);
+    Digits.setElementAt(5, 81);
+    Digits.print();
 }
 
 
