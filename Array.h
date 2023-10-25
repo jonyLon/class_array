@@ -7,6 +7,7 @@ private:
 	size_t size = 0;
 	int* arr = nullptr;
 public:
+	Array() = default;
 	template <typename... Args>
 	Array(size_t sizeArr, Args... args) {
 		this->size = sizeArr;
@@ -26,6 +27,14 @@ public:
 	~Array() {
 		if (this->arr != nullptr) {
 			delete[] this->arr;
+		}
+	}
+	void operator =(Array& other)  {
+		this->size = other.size;
+		this->arr = new int[this->size] {};
+		for (size_t i = 0; i < size; i++)
+		{
+			this->arr[i] = other.arr[i];
 		}
 	}
 	inline const size_t &getSize() const {

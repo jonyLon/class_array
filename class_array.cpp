@@ -14,9 +14,18 @@ int main()
     Digits.sort();
     Digits.print();
 
-    Digits.setSize(6);
+    Digits.setSize(9);
     Digits.setElementAt(5, 81);
     Digits.print();
+    Numbers.print();
+
+    Array list;
+
+    list = Numbers;
+    list.print();
+
+
+    
 }
 
 
